@@ -7,7 +7,6 @@
 //
 
 import NetworkLayer
-import Entities
 
 final class RendererModuleInteractor {
     var interactorToPresenterProtocol: RendererModuleInteractorToPresenter!

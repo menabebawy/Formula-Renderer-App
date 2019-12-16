@@ -45,12 +45,7 @@
 		FA4D1F4623A7FF5E00F5FADA /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4D1F3F23A7FF5E00F5FADA /* Utils.framework */; };
 		FA4D1F4723A7FF5E00F5FADA /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA4D1F3F23A7FF5E00F5FADA /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA4D1F4C23A7FFB700F5FADA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D1F4B23A7FFB700F5FADA /* UIView+Extension.swift */; };
-		FA4D1F5623A81F7B00F5FADA /* Entities.h in Headers */ = {isa = PBXBuildFile; fileRef = FA4D1F5423A81F7B00F5FADA /* Entities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FA4D1F5923A81F7B00F5FADA /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4D1F5223A81F7B00F5FADA /* Entities.framework */; };
-		FA4D1F5A23A81F7B00F5FADA /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA4D1F5223A81F7B00F5FADA /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FA4D1F5F23A81FB700F5FADA /* FormulaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D1F5E23A81FB700F5FADA /* FormulaType.swift */; };
 		FAA9EAA423A824F800ED8C96 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4D1ED723A7C6D800F5FADA /* NetworkLayer.framework */; };
-		FAA9EAA523A824FD00ED8C96 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4D1F5223A81F7B00F5FADA /* Entities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,13 +70,6 @@
 			remoteGlobalIDString = FA4D1F3E23A7FF5E00F5FADA;
 			remoteInfo = Utils;
 		};
-		FA4D1F5723A81F7B00F5FADA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA4D1EB523A7C67600F5FADA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FA4D1F5123A81F7B00F5FADA;
-			remoteInfo = Entities;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,7 +82,6 @@
 				FA4D1EDF23A7C6D800F5FADA /* NetworkLayer.framework in Embed Frameworks */,
 				FA4D1F4723A7FF5E00F5FADA /* Utils.framework in Embed Frameworks */,
 				FA4D1F0E23A7C79D00F5FADA /* RendererModule.framework in Embed Frameworks */,
-				FA4D1F5A23A81F7B00F5FADA /* Entities.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +128,6 @@
 		FA4D1F4123A7FF5E00F5FADA /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		FA4D1F4223A7FF5E00F5FADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA4D1F4B23A7FFB700F5FADA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		FA4D1F5223A81F7B00F5FADA /* Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA4D1F5423A81F7B00F5FADA /* Entities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entities.h; sourceTree = "<group>"; };
-		FA4D1F5523A81F7B00F5FADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA4D1F5E23A81FB700F5FADA /* FormulaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +138,6 @@
 				FA4D1EDE23A7C6D800F5FADA /* NetworkLayer.framework in Frameworks */,
 				FA4D1F4623A7FF5E00F5FADA /* Utils.framework in Frameworks */,
 				FA4D1F0D23A7C79D00F5FADA /* RendererModule.framework in Frameworks */,
-				FA4D1F5923A81F7B00F5FADA /* Entities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,19 +152,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA9EAA523A824FD00ED8C96 /* Entities.framework in Frameworks */,
 				FAA9EAA423A824F800ED8C96 /* NetworkLayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA4D1F3C23A7FF5E00F5FADA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA4D1F4F23A81F7B00F5FADA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -199,7 +173,6 @@
 				FA4D1F0723A7C79D00F5FADA /* RendererModule */,
 				FA4D1F4023A7FF5E00F5FADA /* Utils */,
 				FA4D1ED823A7C6D800F5FADA /* NetworkLayer */,
-				FA4D1F5323A81F7B00F5FADA /* Entities */,
 				FA4D1EBE23A7C67600F5FADA /* Products */,
 				FAA9EAA323A824F800ED8C96 /* Frameworks */,
 			);
@@ -212,7 +185,6 @@
 				FA4D1ED723A7C6D800F5FADA /* NetworkLayer.framework */,
 				FA4D1F0623A7C79D00F5FADA /* RendererModule.framework */,
 				FA4D1F3F23A7FF5E00F5FADA /* Utils.framework */,
-				FA4D1F5223A81F7B00F5FADA /* Entities.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -360,16 +332,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		FA4D1F5323A81F7B00F5FADA /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				FA4D1F5E23A81FB700F5FADA /* FormulaType.swift */,
-				FA4D1F5423A81F7B00F5FADA /* Entities.h */,
-				FA4D1F5523A81F7B00F5FADA /* Info.plist */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		FAA9EAA323A824F800ED8C96 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,14 +366,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA4D1F4D23A81F7B00F5FADA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA4D1F5623A81F7B00F5FADA /* Entities.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -430,7 +384,6 @@
 				FA4D1EDD23A7C6D800F5FADA /* PBXTargetDependency */,
 				FA4D1F0C23A7C79D00F5FADA /* PBXTargetDependency */,
 				FA4D1F4523A7FF5E00F5FADA /* PBXTargetDependency */,
-				FA4D1F5823A81F7B00F5FADA /* PBXTargetDependency */,
 			);
 			name = FormulaRendererApp;
 			productName = FormulaRendererApp;
@@ -491,24 +444,6 @@
 			productReference = FA4D1F3F23A7FF5E00F5FADA /* Utils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FA4D1F5123A81F7B00F5FADA /* Entities */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FA4D1F5B23A81F7B00F5FADA /* Build configuration list for PBXNativeTarget "Entities" */;
-			buildPhases = (
-				FA4D1F4D23A81F7B00F5FADA /* Headers */,
-				FA4D1F4E23A81F7B00F5FADA /* Sources */,
-				FA4D1F4F23A81F7B00F5FADA /* Frameworks */,
-				FA4D1F5023A81F7B00F5FADA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Entities;
-			productName = Entities;
-			productReference = FA4D1F5223A81F7B00F5FADA /* Entities.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -533,10 +468,6 @@
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
 					};
-					FA4D1F5123A81F7B00F5FADA = {
-						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
-					};
 				};
 			};
 			buildConfigurationList = FA4D1EB823A7C67600F5FADA /* Build configuration list for PBXProject "FormulaRendererApp" */;
@@ -556,7 +487,6 @@
 				FA4D1ED623A7C6D800F5FADA /* NetworkLayer */,
 				FA4D1F0523A7C79D00F5FADA /* RendererModule */,
 				FA4D1F3E23A7FF5E00F5FADA /* Utils */,
-				FA4D1F5123A81F7B00F5FADA /* Entities */,
 			);
 		};
 /* End PBXProject section */
@@ -588,13 +518,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA4D1F3D23A7FF5E00F5FADA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA4D1F5023A81F7B00F5FADA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -657,14 +580,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA4D1F4E23A81F7B00F5FADA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA4D1F5F23A81FB700F5FADA /* FormulaType.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -682,11 +597,6 @@
 			isa = PBXTargetDependency;
 			target = FA4D1F3E23A7FF5E00F5FADA /* Utils */;
 			targetProxy = FA4D1F4423A7FF5E00F5FADA /* PBXContainerItemProxy */;
-		};
-		FA4D1F5823A81F7B00F5FADA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA4D1F5123A81F7B00F5FADA /* Entities */;
-			targetProxy = FA4D1F5723A81F7B00F5FADA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1022,63 +932,6 @@
 			};
 			name = Release;
 		};
-		FA4D1F5C23A81F7B00F5FADA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Entities/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = mena.Entities;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FA4D1F5D23A81F7B00F5FADA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Entities/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = mena.Entities;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1123,15 +976,6 @@
 			buildConfigurations = (
 				FA4D1F4923A7FF5E00F5FADA /* Debug */,
 				FA4D1F4A23A7FF5E00F5FADA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FA4D1F5B23A81F7B00F5FADA /* Build configuration list for PBXNativeTarget "Entities" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FA4D1F5C23A81F7B00F5FADA /* Debug */,
-				FA4D1F5D23A81F7B00F5FADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
