@@ -27,7 +27,7 @@ public final class RendererModuleViewController: UIViewController {
     }
     
     @IBAction private func renderButtonClicked() {
-        print("clicked")
+        viewToPresenterProtocol.requestFormulaImage(by: formulaTextField.text ?? "")
     }
 
 }
@@ -36,6 +36,8 @@ public final class RendererModuleViewController: UIViewController {
 
 extension RendererModuleViewController: RenderModulePresenterToView {
     func viewLoaded() {
+        title = "Formula renderer"
+        formulaTextField.delegate = self
         disableRenderButton()
         activityIndicatorView.stopAnimating()
     }
@@ -55,13 +57,16 @@ extension RendererModuleViewController: RenderModulePresenterToView {
         renderButton.backgroundColor = .gray
     }
     
-    func showFormulaImage(_ image: UIImage) {
+    func showFormulaImage(data: Data) {
         gotResponse()
+        formulaImageView.image = UIImage(data: data)
     }
     
     func willRequestFormulaImage() {
+        formulaTextField.resignFirstResponder()
         activityIndicatorView.startAnimating()
         formulaTextField.isEnabled = false
+        formulaImageView.image = nil
         disableRenderButton()
     }
     
@@ -71,4 +76,17 @@ extension RendererModuleViewController: RenderModulePresenterToView {
         enableRenderButton()
     }
     
+}
+
+// MARK: -
+
+extension RendererModuleViewController: UITextFieldDelegate {
+    public func textField(_ textField: UITextField,
+                          shouldChangeCharactersIn range: NSRange,
+                          replacementString string: String) -> Bool {
+        let updatedNSString = textField.text as NSString?
+        let updatedString = updatedNSString?.replacingCharacters(in: range, with: string) ?? ""
+        viewToPresenterProtocol.didChangeFormulaTextField(text: updatedString)
+        return true
+    }
 }

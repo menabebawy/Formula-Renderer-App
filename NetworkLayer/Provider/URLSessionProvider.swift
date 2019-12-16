@@ -15,9 +15,7 @@ public final class URLSessionProvider: ProviderProtocol {
         self.session = session
     }
 
-    public func request<T>(type: T.Type,
-                           service: ServiceProtocol,
-                           completion: @escaping (NetworkResponse<T>) -> Void) where T: Decodable {
+    public func request(service: ServiceProtocol, completion: @escaping (NetworkResponse) -> Void) {
         let request = URLRequest(service: service)
         let task = session.dataTask(request: request, completionHandler: { [weak self] data, response, error in
             let httpResponse = response as? HTTPURLResponse
@@ -25,21 +23,19 @@ public final class URLSessionProvider: ProviderProtocol {
         })
         task.resume()
     }
-
-    private func handleDataResponse<T: Decodable>(data: Data?,
-                                                  response: HTTPURLResponse?,
-                                                  error: Error?,
-                                                  completion: @escaping (NetworkResponse<T>) -> Void) {
+    
+    private func handleDataResponse(data: Data?,
+                                    response: HTTPURLResponse?,
+                                    error: Error?,
+                                    completion: @escaping (NetworkResponse) -> Void) {
         guard error == nil else { return completion(.failure(.unknown)) }
         guard let response = response else { return completion(.failure(.noJSONData)) }
-
+        
         DispatchQueue.main.async {
             switch response.statusCode {
             case 200...299:
-                guard let data = data, let model = try? JSONDecoder().decode(T.self, from: data) else {
-                    return completion(.failure(.unknown))
-                }
-                completion(.success(model))
+                guard let data = data else { return completion(.failure(.unknown)) }
+                completion(.success(response, data))
             default:
                 completion(.failure(.unknown))
             }

@@ -6,13 +6,11 @@
 //  Copyright © 2019 MacBook. All rights reserved.
 //
 
-import UIKit
-
 protocol RenderModulePresenterToView: class {
     func viewLoaded()
     func failedToGetFormaulaWithError(message: String)
     func enableRenderButton()
     func disableRenderButton()
-    func showFormulaImage(_ image: UIImage)
+    func showFormulaImage(data: Data)
     func willRequestFormulaImage()
 }

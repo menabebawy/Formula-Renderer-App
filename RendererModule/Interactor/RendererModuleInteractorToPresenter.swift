@@ -9,6 +9,6 @@
 import UIKit
 
 protocol RendererModuleInteractorToPresenter {
-    func loadFormula(image: UIImage)
+    func formulaData(_ data: Data)
     func error(message: String)
 }

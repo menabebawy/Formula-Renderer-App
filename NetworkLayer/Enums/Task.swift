@@ -6,7 +6,7 @@
 //  Copyright © 2018 CocoApps. All rights reserved.
 //
 
-public typealias Parameters = KeyValuePairs<String, Any>
+public typealias Parameters = Dictionary<String, Any>
 
 public enum Task {
     case requestPlain

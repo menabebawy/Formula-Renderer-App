@@ -6,7 +6,7 @@
 //  Copyright © 2018 CocoApps. All rights reserved.
 //
 
-public enum NetworkResponse<T> {
-    case success(T)
+public enum NetworkResponse {
+    case success(HTTPURLResponse, Data)
     case failure(NetworkError)
 }

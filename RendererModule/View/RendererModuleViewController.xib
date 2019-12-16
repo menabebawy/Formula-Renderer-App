@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RendererModuleViewController" customModule="RendererModule" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RendererModuleViewController" customModule="FormulaRendererApp" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicatorView" destination="2Hk-Bs-Wm5" id="hlm-O9-EEb"/>
                 <outlet property="formulaImageView" destination="xMg-p5-SDh" id="cNd-n5-UJH"/>
@@ -65,10 +65,23 @@
                             <real key="value" value="8"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="renderButtonClicked" destination="-1" eventType="touchUpInside" id="pbr-Xh-BaU"/>
+                    </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xMg-p5-SDh">
-                    <rect key="frame" x="62.5" y="260" width="250" height="167"/>
-                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAj-5t-UOk">
+                    <rect key="frame" x="0.0" y="182" width="375" height="323.5"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMg-p5-SDh">
+                            <rect key="frame" x="-5" y="-20" width="385" height="363.5"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="xMg-p5-SDh" firstAttribute="centerX" secondItem="BAj-5t-UOk" secondAttribute="centerX" id="9UY-bt-g02"/>
+                        <constraint firstItem="xMg-p5-SDh" firstAttribute="centerY" secondItem="BAj-5t-UOk" secondAttribute="centerY" id="UlR-SM-VV8"/>
+                    </constraints>
+                </view>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2Hk-Bs-Wm5">
                     <rect key="frame" x="177.5" y="156" width="20" height="20"/>
                 </activityIndicatorView>
@@ -77,17 +90,17 @@
             <constraints>
                 <constraint firstItem="N38-7C-oQx" firstAttribute="trailing" secondItem="OWC-6x-C0V" secondAttribute="trailing" id="2wc-tb-2D3"/>
                 <constraint firstItem="N38-7C-oQx" firstAttribute="leading" secondItem="OWC-6x-C0V" secondAttribute="leading" id="3SQ-b5-1fD"/>
-                <constraint firstItem="xMg-p5-SDh" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1:4" id="8Cz-3Y-q7M"/>
+                <constraint firstItem="BAj-5t-UOk" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="832-sJ-FrU"/>
                 <constraint firstItem="OWC-6x-C0V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="HVU-ma-LMa"/>
                 <constraint firstItem="N38-7C-oQx" firstAttribute="height" secondItem="OWC-6x-C0V" secondAttribute="height" id="Itx-b1-wjW"/>
-                <constraint firstItem="xMg-p5-SDh" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Od2-CR-ksb"/>
+                <constraint firstItem="BAj-5t-UOk" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="MAE-gl-mjc"/>
                 <constraint firstItem="OWC-6x-C0V" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="Qfh-kd-40e"/>
                 <constraint firstItem="2Hk-Bs-Wm5" firstAttribute="centerX" secondItem="N38-7C-oQx" secondAttribute="centerX" id="X7o-1V-o4H"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OWC-6x-C0V" secondAttribute="trailing" constant="16" id="Y3T-3w-b6B"/>
-                <constraint firstItem="xMg-p5-SDh" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="2:3" id="bdD-Mr-7bd"/>
                 <constraint firstItem="2Hk-Bs-Wm5" firstAttribute="top" secondItem="N38-7C-oQx" secondAttribute="bottom" constant="20" id="dxi-tN-x4o"/>
                 <constraint firstItem="N38-7C-oQx" firstAttribute="top" secondItem="OWC-6x-C0V" secondAttribute="bottom" constant="20" id="gPO-BH-eBI"/>
-                <constraint firstItem="xMg-p5-SDh" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="hyI-wt-U2o"/>
+                <constraint firstItem="BAj-5t-UOk" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="uOB-st-Ppd"/>
+                <constraint firstItem="BAj-5t-UOk" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="1:2" id="zvZ-dG-1Ak"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="36.5" y="-15.5"/>
