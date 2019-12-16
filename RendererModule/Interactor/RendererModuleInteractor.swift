@@ -6,8 +6,18 @@
 //  Copyright © 2019 MacBook. All rights reserved.
 //
 
-import UIKit
+import NetworkLayer
 
-class RendererModuleInteractor: NSObject {
+final class RendererModuleInteractor {
+    var interactorToPresenterProtocol: RendererModuleInteractorToPresenter!
+    let sessionProvider = URLSessionProvider()
+}
 
+// MARK: - Renderer module presenter to interactor
+
+extension RendererModuleInteractor: RendererModulePresenterToInteractor {
+    func requestFormulaImage(by text: String) {
+        
+    }
+    
 }

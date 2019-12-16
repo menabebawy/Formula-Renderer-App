@@ -20,7 +20,18 @@ final class RendererCoordinator: Coordinator {
     func start() {
         let nibName = String(describing: RendererModuleViewController.self)
         let rendererViewController = RendererModuleViewController(nibName: nibName, bundle: .main)
+        rendererViewController.delegate = self
         navigationController.viewControllers = [rendererViewController]
     }
 
+}
+
+// MARL: -
+
+extension RendererCoordinator: RendererModuleViewControllerDelegate {
+    func showErrorAlert(message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        navigationController.topViewController?.present(alertController, animated: true, completion: nil)
+    }
+    
 }

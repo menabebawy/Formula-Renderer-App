@@ -9,4 +9,5 @@
 import Foundation
 
 protocol RendererModulePresenterToInteractor {
+    func requestFormulaImage(by text: String)
 }

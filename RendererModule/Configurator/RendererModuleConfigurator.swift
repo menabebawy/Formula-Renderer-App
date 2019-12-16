@@ -18,12 +18,12 @@ final class RendererModuleConfigurator {
     
     private func configure(viewController: RendererModuleViewController) {
         let presenter = RendererModulePresenter()
-//        presenter.view = viewController
+        presenter.view = viewController
         
         let interactor = RendererModuleInteractor()
-//        interactor.interactorToPresenterProtocol = presenter
+        interactor.interactorToPresenterProtocol = presenter
         
-//        presenter.interactor = interactor
-//        viewController.viewToPresenterProtocol = presenter
+        presenter.interactor = interactor
+        viewController.viewToPresenterProtocol = presenter
     }
 }

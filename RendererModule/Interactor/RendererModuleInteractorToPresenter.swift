@@ -6,7 +6,9 @@
 //  Copyright © 2019 MacBook. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol RendererModuleInteractorToPresenter {
+    func loadFormula(image: UIImage)
+    func error(message: String)
 }
