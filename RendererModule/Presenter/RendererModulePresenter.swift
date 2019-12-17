@@ -15,7 +15,7 @@ final class RendererModulePresenter {
 
 extension RendererModulePresenter: RendererModuleViewToPresenter {
     func didChangeFormulaTextField(text: String) {
-        // A local validation to enable/disbale render button
+        // A local validation to enable/disbale render button due to preventing
         formulaTextValid(text) ? view.enableRenderButton() : view.disableRenderButton()
     }
     
@@ -32,6 +32,9 @@ extension RendererModulePresenter: RendererModuleViewToPresenter {
         view.viewLoaded()
     }
     
+    func shareFormula(text: String) {
+        view.showActivityController(text: shape(text))
+    }
     
     /// Use to shape formula text before sent to endpoint
     ///

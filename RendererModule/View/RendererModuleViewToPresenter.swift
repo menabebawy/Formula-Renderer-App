@@ -11,5 +11,6 @@ import Foundation
 protocol RendererModuleViewToPresenter {
     func viewIsReady()
     func didChangeFormulaTextField(text: String)
+    func shareFormula(text: String)
     func requestFormulaImage(by text: String)
 }

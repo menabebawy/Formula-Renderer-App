@@ -12,5 +12,6 @@ protocol RenderModulePresenterToView: class {
     func enableRenderButton()
     func disableRenderButton()
     func showFormulaImage(data: Data)
+    func showActivityController(text: String)
     func willRequestFormulaImage()
 }

@@ -35,4 +35,9 @@ extension RendererCoordinator: RendererModuleViewControllerDelegate {
         navigationController.topViewController?.present(alertController, animated: true, completion: nil)
     }
     
+    func showActivityController(text: String, image: UIImage) {
+        let vc = UIActivityViewController(activityItems: [text, image], applicationActivities: [])
+        navigationController.topViewController?.present(vc, animated: true)
+    }
+    
 }
