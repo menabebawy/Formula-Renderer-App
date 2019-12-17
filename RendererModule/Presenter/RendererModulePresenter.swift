@@ -16,7 +16,7 @@ final class RendererModulePresenter {
 extension RendererModulePresenter: RendererModuleViewToPresenter {
     func didChangeFormulaTextField(text: String) {
         // A local validation to enable/disbale render button
-        text.count >= 1 ? view.enableRenderButton() : view.disableRenderButton()
+        formulaTextValid(text) ? view.enableRenderButton() : view.disableRenderButton()
     }
     
     func requestFormulaImage(by text: String) {
@@ -25,11 +25,24 @@ extension RendererModulePresenter: RendererModuleViewToPresenter {
             return
         }
         view.willRequestFormulaImage()
-        interactor.requestFormulaImage(by: text)
+        interactor.requestFormulaImage(by: shape(text))
     }
     
     func viewIsReady() {
         view.viewLoaded()
+    }
+    
+    
+    /// Use to shape formula text before sent to endpoint
+    ///
+    /// - Parameter text: input field text entered by user
+    /// - Returns: text without any spaces from both sides, new lines and between spaces
+    private func shape(_ text: String) -> String {
+        return text.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: " ", with: "")
+    }
+    
+    private func formulaTextValid(_ text: String) -> Bool {
+        return !text.trimmingCharacters(in: .whitespaces).isEmpty
     }
     
 }
@@ -38,15 +51,11 @@ extension RendererModulePresenter: RendererModuleViewToPresenter {
 
 extension RendererModulePresenter: RendererModuleInteractorToPresenter {
     func formulaData(_ data: Data) {
-        DispatchQueue.main.async {
-            self.view.showFormulaImage(data: data)
-        }
+        view.showFormulaImage(data: data)
     }
     
     func error(message: String) {
-        DispatchQueue.main.async {
-            self.view.failedToGetFormaulaWithError(message: message)
-        }
+        view.failedToGetFormaulaWithError(message: message)
     }
     
 }
