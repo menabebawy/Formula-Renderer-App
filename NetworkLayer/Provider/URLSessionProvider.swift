@@ -28,13 +28,17 @@ public final class URLSessionProvider: ProviderProtocol {
                                     response: HTTPURLResponse?,
                                     error: Error?,
                                     completion: @escaping (NetworkResponse) -> Void) {
-        guard error == nil else { return completion(.failure(.unknown)) }
-        guard let response = response else { return completion(.failure(.noJSONData)) }
+        guard error == nil else {
+            return completion(.failure(.description(error?.localizedDescription ?? "")))
+        }
+
+        guard let data = data, let response = response else {
+            return completion(.failure(.noJSONData))
+        }
         
         DispatchQueue.main.async {
             switch response.statusCode {
             case 200...299:
-                guard let data = data else { return completion(.failure(.unknown)) }
                 completion(.success(response, data))
             default:
                 completion(.failure(.unknown))

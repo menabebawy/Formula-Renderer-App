@@ -38,11 +38,15 @@ extension RendererModulePresenter: RendererModuleViewToPresenter {
 
 extension RendererModulePresenter: RendererModuleInteractorToPresenter {
     func formulaData(_ data: Data) {
-        view.showFormulaImage(data: data)
+        DispatchQueue.main.async {
+            self.view.showFormulaImage(data: data)
+        }
     }
     
     func error(message: String) {
-        view.failedToGetFormaulaWithError(message: message)
+        DispatchQueue.main.async {
+            self.view.failedToGetFormaulaWithError(message: message)
+        }
     }
     
 }

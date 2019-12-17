@@ -7,6 +7,7 @@
 //
 
 public enum NetworkError: Error {
-    case unknown
     case noJSONData
+    case unknown
+    case description(String)
 }

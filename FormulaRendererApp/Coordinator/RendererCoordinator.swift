@@ -26,7 +26,7 @@ final class RendererCoordinator: Coordinator {
 
 }
 
-// MARL: -
+// MARK: - Renderer module view controller delegate
 
 extension RendererCoordinator: RendererModuleViewControllerDelegate {
     func showErrorAlert(message: String) {
