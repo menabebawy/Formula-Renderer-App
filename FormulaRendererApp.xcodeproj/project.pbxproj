@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA017E9923AA2C9500B179D7 /* RendererModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA017E9823AA2C9500B179D7 /* RendererModuleConfiguratorTests.swift */; };
 		FA017EA123AA2DA700B179D7 /* RendererModuleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA017EA023AA2DA700B179D7 /* RendererModuleInteractorTests.swift */; };
 		FA017EA323AA379D00B179D7 /* RendererModulePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA017EA223AA379D00B179D7 /* RendererModulePresenterTests.swift */; };
+		FA017EA723AA4AA700B179D7 /* RendererModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA017EA623AA4AA700B179D7 /* RendererModuleConfiguratorTests.swift */; };
 		FA32B0F523A8D48200506FA8 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4D1F3F23A7FF5E00F5FADA /* Utils.framework */; };
 		FA32B0F723A8D54F00506FA8 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA32B0F323A8D3AE00506FA8 /* Reachability.swift */; };
 		FA4D1EC123A7C67600F5FADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D1EC023A7C67600F5FADA /* AppDelegate.swift */; };
@@ -102,10 +102,10 @@
 
 /* Begin PBXFileReference section */
 		FA017E9623AA2C9500B179D7 /* RendererModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RendererModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA017E9823AA2C9500B179D7 /* RendererModuleConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		FA017E9A23AA2C9500B179D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA017EA023AA2DA700B179D7 /* RendererModuleInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererModuleInteractorTests.swift; sourceTree = "<group>"; };
 		FA017EA223AA379D00B179D7 /* RendererModulePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererModulePresenterTests.swift; sourceTree = "<group>"; };
+		FA017EA623AA4AA700B179D7 /* RendererModuleConfiguratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		FA32B0F323A8D3AE00506FA8 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		FA4D1EBD23A7C67600F5FADA /* FormulaRendererApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormulaRendererApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4D1EC023A7C67600F5FADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 		FA017E6423AA23A600B179D7 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
-				FA017E9823AA2C9500B179D7 /* RendererModuleConfiguratorTests.swift */,
+				FA017EA623AA4AA700B179D7 /* RendererModuleConfiguratorTests.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -618,7 +618,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA017E9923AA2C9500B179D7 /* RendererModuleConfiguratorTests.swift in Sources */,
+				FA017EA723AA4AA700B179D7 /* RendererModuleConfiguratorTests.swift in Sources */,
 				FA017EA323AA379D00B179D7 /* RendererModulePresenterTests.swift in Sources */,
 				FA017EA123AA2DA700B179D7 /* RendererModuleInteractorTests.swift in Sources */,
 			);
