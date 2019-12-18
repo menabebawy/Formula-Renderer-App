@@ -7,7 +7,7 @@
 //
 
 final class RendererModulePresenter {
-    weak var view: RenderModulePresenterToView!
+    weak var view: RendererModulePresenterToView!
     var interactor: RendererModulePresenterToInteractor!
 }
 
@@ -21,7 +21,7 @@ extension RendererModulePresenter: RendererModuleViewToPresenter {
     
     func requestFormulaImage(by text: String) {
         if text.isEmpty {
-            view.failedToGetFormaulaWithError(message: "Text is empty!.")
+            view.failedToFetchFormaulaImage(message: "Text is empty!.")
             return
         }
         view.willRequestFormulaImage()
@@ -39,9 +39,11 @@ extension RendererModulePresenter: RendererModuleViewToPresenter {
     /// Use to shape formula text before sent to endpoint
     ///
     /// - Parameter text: input field text entered by user
-    /// - Returns: text without any spaces from both sides, new lines and between spaces
+    /// - Returns: text without any spaces from both sides, new lines and between spaces which is more than one spac
     private func shape(_ text: String) -> String {
-        return text.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: " ", with: "")
+        return text.components(separatedBy: .whitespacesAndNewlines)
+            .filter { !$0.isEmpty }
+            .joined(separator: " ")
     }
     
     private func formulaTextValid(_ text: String) -> Bool {
@@ -58,7 +60,7 @@ extension RendererModulePresenter: RendererModuleInteractorToPresenter {
     }
     
     func error(message: String) {
-        view.failedToGetFormaulaWithError(message: message)
+        view.failedToFetchFormaulaImage(message: message)
     }
     
 }

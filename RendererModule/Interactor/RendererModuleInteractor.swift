@@ -22,7 +22,7 @@ extension RendererModuleInteractor: RendererModulePresenterToInteractor {
             self.interactorToPresenterProtocol.error(message: "The internet appears offline")
             return
         }
-
+        
         requestResourceLocation(formulaText: text, completionHandler: { [weak self] resourceLocation in
             guard let `self` = self else { return }
             self.requestImage(by: resourceLocation)
@@ -42,7 +42,7 @@ extension RendererModuleInteractor: RendererModulePresenterToInteractor {
                     return
                 }
                 completionHandler(resourceLocation)
-
+                
             case let .failure(networkError):
                 let errorDes: String
                 switch networkError {

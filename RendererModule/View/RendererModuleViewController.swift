@@ -13,16 +13,16 @@ public protocol RendererModuleViewControllerDelegate: class {
     func showActivityController(text: String, image: UIImage)
 }
 
-public final class RendererModuleViewController: UIViewController {
+public class RendererModuleViewController: UIViewController {
     @IBOutlet weak private var formulaTextField: UITextField!
     @IBOutlet weak private var renderButton: UIButton!
     @IBOutlet weak private var formulaImageView: UIImageView!
     @IBOutlet weak private var shareButton: UIButton!
     @IBOutlet weak private var activityIndicatorView: UIActivityIndicatorView!
-
+    
     var viewToPresenterProtocol: RendererModuleViewToPresenter!
     weak public var delegate: RendererModuleViewControllerDelegate?
-
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         viewToPresenterProtocol.viewIsReady()
@@ -35,12 +35,12 @@ public final class RendererModuleViewController: UIViewController {
     @IBAction private func shareButtonClicked() {
         viewToPresenterProtocol.shareFormula(text: formulaTextField.text ?? "")
     }
-
+    
 }
 
 // MARK: - Renderer module presenter to view
 
-extension RendererModuleViewController: RenderModulePresenterToView {
+extension RendererModuleViewController: RendererModulePresenterToView {
     func viewLoaded() {
         title = "Formula renderer"
         formulaTextField.delegate = self
@@ -58,8 +58,8 @@ extension RendererModuleViewController: RenderModulePresenterToView {
             shareButton.isHidden = formulaImageView.image == nil
         }
     }
-
-    func failedToGetFormaulaWithError(message: String) {
+    
+    func failedToFetchFormaulaImage(message: String) {
         gotResponse()
         delegate?.showErrorAlert(message: message)
     }
@@ -114,4 +114,5 @@ extension RendererModuleViewController: UITextFieldDelegate {
         viewToPresenterProtocol.didChangeFormulaTextField(text: updatedString)
         return true
     }
+    
 }

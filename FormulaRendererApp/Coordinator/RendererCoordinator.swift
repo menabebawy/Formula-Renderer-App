@@ -23,7 +23,7 @@ final class RendererCoordinator: Coordinator {
         rendererViewController.delegate = self
         navigationController.viewControllers = [rendererViewController]
     }
-
+    
 }
 
 // MARK: - Renderer module view controller delegate

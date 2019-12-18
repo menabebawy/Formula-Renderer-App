@@ -6,8 +6,6 @@
 //  Copyright © 2019 MacBook. All rights reserved.
 //
 
-import UIKit
-
 protocol RendererModuleInteractorToPresenter {
     func formulaData(_ data: Data)
     func error(message: String)

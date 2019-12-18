@@ -6,8 +6,6 @@
 //  Copyright © 2019 MacBook. All rights reserved.
 //
 
-import Foundation
-
 protocol RendererModuleViewToPresenter {
     func viewIsReady()
     func didChangeFormulaTextField(text: String)

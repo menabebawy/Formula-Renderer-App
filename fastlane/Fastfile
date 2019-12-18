@@ -4,6 +4,7 @@ platform :ios do
 
   desc "Run all unit tests"
   lane :tests_lane do
-    scan(devices: ["iPhone 7"])
+    scan(devices: ["iPhone 7"], clean: true)
   end
+
 end
