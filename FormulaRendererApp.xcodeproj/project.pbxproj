@@ -232,9 +232,9 @@
 			children = (
 				FA4D1EBF23A7C67600F5FADA /* FormulaRendererApp */,
 				FA4D1F0723A7C79D00F5FADA /* RendererModule */,
+				FA017E9723AA2C9500B179D7 /* RendererModuleTests */,
 				FA4D1F4023A7FF5E00F5FADA /* Utils */,
 				FA4D1ED823A7C6D800F5FADA /* NetworkLayer */,
-				FA017E9723AA2C9500B179D7 /* RendererModuleTests */,
 				FA4D1EBE23A7C67600F5FADA /* Products */,
 			);
 			sourceTree = "<group>";
