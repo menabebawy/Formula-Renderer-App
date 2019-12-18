@@ -39,6 +39,9 @@ Navigate to project directory then execute
 bundle exec fastlane tests_lane
 ```
 
+![](demo/unit-tests.png)
+
+
 ## Networking
 
 Use native [Network Layer](https://github.com/marcinjackowski/NetworkLayer), thanks  [Marcin Jackowski](https://github.com/marcinjackowski) for such great work
